@@ -10,7 +10,7 @@ from import_export import resources
 class EstudianteResource(resources.ModelResource):
     class Meta:
         model = Estudiante
-        exclude = ('modulos', )
+        exclude = ('modulos', ) 
 
 # Se crea una clase que hereda
 # de ModelAdmin para el modelo
@@ -43,3 +43,4 @@ class MatriculaAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ('estudiante__nombre', 'modulo__nombre')
 
 admin.site.register(Matricula, MatriculaAdmin)
+
